@@ -4,6 +4,7 @@ import { Container, Card, Badge, Button, Tabs, Tab, Alert, Spinner, Row, Col } f
 import { projectService } from '../../services/projectService';
 import { Project } from '../../types';
 import { useAuth } from '../../context/AuthContext';
+import MilestoneList from '../milestones/MilestoneList';
 
 
 const ProjectDetails: React.FC = () => {
@@ -189,7 +190,12 @@ const ProjectDetails: React.FC = () => {
           </Row>
 
           <hr className="my-4" />
-
+            <Tabs defaultActiveKey="milestones" className="mb-3">
+            <Tab eventKey="milestones" title="Milestones">
+              {id && <MilestoneList projectId={id} />}
+            </Tab>
+            
+          </Tabs>
          
         </Card.Body>
       </Card>
