@@ -1,4 +1,4 @@
-Project Structure_
+	Project Structure_
 	components  :          
 		auth      :{Login, Register, ProtectedRoute}
 		layout    :{Navbar, Footer}
