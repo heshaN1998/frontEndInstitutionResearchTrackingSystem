@@ -5,6 +5,7 @@ import { projectService } from '../../services/projectService';
 import { ProjectFormData, ProjectStatus } from '../../types';
 import { useAuth } from '../../context/AuthContext';
 
+
 const ProjectForm: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
@@ -175,6 +176,7 @@ const ProjectForm: React.FC = () => {
               </Button>
             </div>
           </Form>
+         
         </Card.Body>
       </Card>
     </Container>
